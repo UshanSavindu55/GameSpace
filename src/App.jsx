@@ -1,14 +1,17 @@
 import React from 'react'
-import Navbar from './components/navbar.jsx'
-import Hero from './components/Hero.jsx'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home.jsx';
+import GetStarted from './pages/GetStarted.jsx';
 
 
 const App = () => {
   return (
-    <main>
-      <Navbar />
-      <Hero />
-    </main>
+     <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/get-started" element={<GetStarted />} />
+      </Routes>
+    </Router>
   )
 }
 

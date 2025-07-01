@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Hero = () => {
 
@@ -28,7 +30,9 @@ useEffect(() => {
         <h1 className="hero-paragraph">
           <span className="text-gradient">Gaming </span>made simple — discover and play.
         </h1>
-        <button className="btn-primary">Get Started</button>
+        <Link to="/get-started">
+          <button className="btn-primary">Get Started</button>
+        </Link>
       </div>
     </section>
   )
